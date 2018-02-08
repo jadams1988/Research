@@ -1,0 +1,8 @@
+{
+	MaxPrime=2000000;
+	SUM=0;
+	forprime(i=1,MaxPrime,
+		SUM+=i
+	);
+	print(SUM)
+}

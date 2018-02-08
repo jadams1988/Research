@@ -1,0 +1,16 @@
+{
+	MAX=7;
+	NuMbEr=0;
+	forprime(p=11,987654321,
+		NuMbEr++;
+		if(NuMbEr%100000==0,
+			print([NuMbEr,p])
+		);
+		len=length(Str(p));
+		if(IsPan(p,len),
+			MAX=p;
+			print(MAX)
+		)
+	);
+	print(MAX)
+}

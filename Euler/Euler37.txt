@@ -1,0 +1,33 @@
+{
+	SUM=0;
+	forprime(i=11,1000000,
+		TruncPrime=1;
+		temp=i;
+		len=length(Str(temp));
+		PrimeVec=NumToVec(temp);
+		for(j=1,len-1,
+			NewPrime=0;
+			for(k=1,j,
+				NewPrime*=10;
+				NewPrime+=PrimeVec[k]
+			);
+			if(!isprime(NewPrime),
+				TruncPrime=0
+			)
+		);
+		for(j=1,len-1,
+			NewPrime=0;
+			for(k=1,j,
+				NewPrime+=((10^(k-1))*PrimeVec[len-k+1])
+			);
+			if(!isprime(NewPrime),
+				TruncPrime=0
+			)
+		);
+		if(TruncPrime,
+			print(i);
+			SUM+=i
+		)
+	);
+	print(SUM)
+}

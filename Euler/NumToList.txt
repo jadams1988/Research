@@ -1,0 +1,10 @@
+NumToList(a,sort,flag)={
+	TempNum=a;
+	Sort=sort;
+	Flag=flag;
+	NumList=List(NumToVec(TempNum));
+	if(Sort,
+		listsort(NumList,Flag)
+	);
+	return(NumList)
+}

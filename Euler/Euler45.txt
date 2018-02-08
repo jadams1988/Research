@@ -1,0 +1,25 @@
+{
+	Finished=0;
+	Tn=285;
+	TnNum=40755;
+	Pn=165;
+	PnNum=40755;
+	Hn=143;
+	HnNum=40755;
+	while(!Finished,
+		Tn++;
+		TnNum=Tn*(Tn+1)/2;
+		while(PnNum<TnNum,
+			Pn++;
+			PnNum=Pn*(3*Pn-1)/2
+		);
+		while(HnNum<TnNum,
+			Hn++;
+			HnNum=Hn*(2*Hn-1)
+		);
+		if(TnNum==PnNum&&TnNum==HnNum,
+			print([TnNum,Tn,Pn,Hn]);
+			Finished=1
+		)
+	)
+}

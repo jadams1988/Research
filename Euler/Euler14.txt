@@ -1,0 +1,22 @@
+{
+	LongestChain=0;
+	MaxChainOrigin=1;
+	MaxNumber=1000000;
+	for(i=1,MaxNumber,
+		ChainLength=1;
+		CurChainNum=i;
+		while(CurChainNum>1,
+			if(CurChainNum%2==0,
+				CurChainNum/=2;
+				ChainLength++,
+				CurChainNum=3*CurChainNum+1;
+				ChainLength++;
+			)
+		);
+		if(ChainLength>LongestChain,
+			MaxChainOrigin=i;
+			LongestChain=ChainLength
+		)
+	);
+	print([MaxChainOrigin,LongestChain])
+}

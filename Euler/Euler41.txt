@@ -1,0 +1,16 @@
+{
+	MAX=7;
+	PrimeVec=List([]);
+	forprime(p=11,987654321,
+		listput(PrimeVec,p)
+	);
+	NumPrimes=length(PrimeVec);
+	for(i=1,NumPrimes,
+		p=PrimeVec[i];
+		len=length(Str(p));
+		if(IsPan(p,len),
+			MAX=p
+		)
+	);
+	print(MAX)
+}

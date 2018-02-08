@@ -1,0 +1,12 @@
+{
+	TermNumber=0;
+	icurrent=0;
+	inew=1;
+	while(icurrent<=10^999-1,
+		itemp=inew+icurrent;
+		icurrent=inew;
+		inew=itemp;
+		TermNumber++;
+	);
+	print(TermNumber);
+}

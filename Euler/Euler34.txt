@@ -1,0 +1,21 @@
+{
+	SUM=0;
+	for(i=3,2540160,
+		FacSum=0;
+		temp=i;
+		len=length(Str(i));
+		NUM=vector(len);
+		for(j=1,len,
+			NUM[len-j+1]=temp%10;
+			temp-=temp%10;
+			temp/=10
+		);
+		for(j=1,len,
+			FacSum+=(NUM[j]!)
+		);
+		if(FacSum==i,
+			SUM+=i
+		)
+	);
+	print(SUM)
+}

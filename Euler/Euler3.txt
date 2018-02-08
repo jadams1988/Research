@@ -1,0 +1,9 @@
+{
+	NUM=600851475143;
+	SQRT=sqrt(NUM);
+	forprime(i=1,SQRT,
+		if(NUM%i==0,
+			print(i)
+		)
+	)
+}

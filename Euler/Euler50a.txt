@@ -1,0 +1,24 @@
+{
+	MAX=0;
+	MaxPrime=0;
+	SUM=0;
+	Prime=0;
+	PrimeSums=List([0]);
+	while(SUM<1000000,
+		Prime=nextprime(Prime+1);
+		SUM+=Prime;
+		listput(PrimeSums,SUM)
+	);
+	listpop(PrimeSums);
+	NumPrimes=length(PrimeSums)-1;
+	for(i=1,NumPrimes,
+		for(j=2,NumPrimes+2-i,
+			DIFF=PrimeSums[j+i-1]-PrimeSums[j-1];
+			if(isprime(DIFF),
+				MaxPrime=max(MaxPrime,DIFF);
+				MAX=i
+			)
+		)
+	);
+	print(MaxPrime)
+}

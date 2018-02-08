@@ -1,0 +1,22 @@
+{
+	DaysInMonth=[31,28,31,30,31,30,31,31,30,31,30,31];
+	Day=2;
+	Sundays=0;
+	for(i=1901,2000,
+		for(j=1,12,
+			Day+=DaysInMonth[j];
+			if(i%4==0&&j==2,
+				if(i%100!=0,
+					Day++
+				);
+				if(i%400==0,
+					Day++
+				)
+			);
+			if(Day%7==0,
+				Sundays++
+			)
+		)
+	);
+	print(Sundays)
+}

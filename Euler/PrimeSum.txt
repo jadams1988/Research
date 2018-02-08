@@ -1,0 +1,10 @@
+PrimeSum(start,terms)={
+	SUM=0;
+	first=start;
+	n=terms;
+	for(i=1,n,
+		SUM+=nextprime(first);
+		first=nextprime(first+1)
+	);
+	return(SUM)
+}

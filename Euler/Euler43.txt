@@ -1,0 +1,21 @@
+{
+	SUM=0;
+	Primes=List([2,3,5,7,11,13,17]);
+	for(i=1023456789,1876543210,
+		print(i);
+		pan=IsPan(i,10);
+		Special=0;
+		if(pan,
+			Special=1;
+			NumVec=NumToVec(i);
+			for(j=1,7,
+				VecToNum=100*NumVec[1+j]+10*NumVec[2+j]+NumVec[3+j];
+				if(VecToNum%Primes[j]!=0,
+					Special=0;
+				)
+			)
+		);
+		SUM+=(Special*i)
+	);
+	print(SUM)
+}

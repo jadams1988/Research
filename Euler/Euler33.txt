@@ -1,0 +1,22 @@
+{
+	PROD=1;
+	for(denom=12,99,
+		for(numer=11,denom-1,
+			NumVec=[numer%10,(numer-numer%10)/10];
+			DenomVec=[denom%10,(denom-denom%10)/10];
+			if(numer%10!=0&&denom%10!=0,
+				for(i=1,2,
+					for(j=1,2,
+						if(NumVec[i]==DenomVec[j],
+							if(numer/denom==NumVec[i%2+1]/DenomVec[j%2+1],
+								print([numer,denom]);
+								PROD*=numer/denom
+							)
+						)
+					)
+				)
+			)
+		)
+	);
+	print(PROD)
+}

@@ -1,0 +1,12 @@
+{
+	aMax=100;
+	bMax=100;
+	NUM=listcreate();
+	for(a=2,aMax,
+		for(b=2,bMax,
+			listput(NUM,a^b)
+		)
+	);
+	listsort(NUM,1);
+	print(length(NUM))
+}

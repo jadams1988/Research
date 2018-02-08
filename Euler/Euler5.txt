@@ -1,0 +1,17 @@
+{
+	MinNum=1;
+	MaxDivisor=20;
+	Divisors=vector(MaxDivisor);
+	for(i=2,MaxDivisor,
+		DivisorsMat=factor(i);
+		NumDivisors=matsize(DivisorsMat)[1];
+		for(j=1,NumDivisors,
+			Divisors[DivisorsMat[j,1]]=max(Divisors[DivisorsMat[j,1]],DivisorsMat[j,2])
+		)
+	);
+	print(Divisors);
+	forprime(i=2,MaxDivisor,
+		MinNum*=i^Divisors[i]
+	);
+	print(MinNum)
+}

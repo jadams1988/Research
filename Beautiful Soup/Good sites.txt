@@ -1,0 +1,43 @@
+Good websites!
+
+Soccer Stats:
+	http://www.foxsports.com/soccer/stats?competition=5&season=2015&category=STANDARD&pos=0&team=0&isOpp=0&splitType=0&sort=3
+	Information can be found on page source
+
+	http://simplesoccerstats.com/stats/teamstats.php?lge=14&type=goals&season=0
+	Have to locate the actual table (http://simplesoccerstats.com/stats/dataTable.php?lge=14&type=goals&season=0)
+
+Finance Stats:
+	https://www.google.com/finance?
+	Good for some real crawling. Maybe go through each sector and pick out the top 5 movers in terms of gains.
+
+Basketball Stats:
+	http://stats.nba.com/league/team/#!/?sort=W&dir=1
+	The data is not stored on this site, but found at
+		http://stats.nba.com/stats/leaguedashteamstats?Conference=&DateFrom=&DateTo=&Division=&GameScope=&GameSegment=&LastNGames=0&LeagueID=00&Location=&MeasureType=Base&Month=0&OpponentTeamID=0&Outcome=&PORound=0&PaceAdjust=N&PerMode=PerGame&Period=0&PlayerExperience=&PlayerPosition=&PlusMinus=N&Rank=N&Season=2014-15&SeasonSegment=&SeasonType=Regular+Season&ShotClockRange=&StarterBench=&TeamID=0&VsConference=&VsDivision=
+	This is a JSON file, so you would use a JSON decoder on it.
+
+	http://espn.go.com/nba/statistics
+	Really good. Tables built in HTML source.
+
+Money Exchange
+	http://www.compareremit.com/
+	data stored in the source.
+	The following is a good way to get the data.
+		http://stackoverflow.com/questions/28075119/python-scraping-beautiful-soup-to-obtain-data-from-this-html?rq=1
+
+	http://www.x-rates.com/table/?from=USD&amount=1
+		Data stored in the source. Will need some explaining.
+
+Weather
+	www.wunderground.com/history/airport
+	Data stored in nice HTML format. Can iterate through dates. Make a graph of temperatures over a year.
+
+Faculty
+	https://math.byu.edu/peopleresearch/faculty/
+	Have to read the source to see that you actually need to pull the data from:
+		https://math.byu.edu/wp-admin/admin-ajax.php?action=meet_the_team_display_team_page&mtt_pluginData[category]=faculty&_ajax_nonce=aa6571bfd0
+
+Cancer
+	http://seer.cancer.gov/archive/csr/1975_2011/browse_csr.php?
+	Decent site. Can iterate through tables if you look up list of all html sites. Pages opened with JavaScript, so BeautifulSoup is useless.

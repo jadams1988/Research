@@ -1,0 +1,14 @@
+{
+	for(i=1000,9999,
+		for(r=1,5000-i/2,
+			Num1=i;
+			Num2=i+r;
+			Num3=i+2*r;
+			if(isprime(Num1)&&isprime(Num2)&&isprime(Num3),
+				if(NumToList(Num1,1,0)==NumToList(Num2,1,0)&&NumToList(Num1,1,0)==NumToList(Num3,1,0),
+					print([i,i+r,i+2*r])
+				)
+			)
+		)
+	)
+}

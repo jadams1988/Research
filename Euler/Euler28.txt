@@ -1,0 +1,11 @@
+{
+	Sum=0;
+	Num=1;
+	Spiral=1001;
+	for(i=Num,2*Spiral-1,
+		print(Num);
+		Sum+=Num;
+		Num+=((((i-1)-(i-1)%4)/4+1)*2)
+	);
+	print(Sum)
+}

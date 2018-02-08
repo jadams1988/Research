@@ -1,0 +1,15 @@
+IsPan9(a)={
+	Pandigital=List([1,2,3,4,5,6,7,8,9]);
+	temp=a;
+	Number=List(NumToVec(temp));
+	pan=1;
+	if(length(Number)>9,
+		pan=0
+	);
+	listsort(Number,1);
+	if(Number!=Pandigital,
+		pan=0
+	);
+	return(pan)
+}
+	

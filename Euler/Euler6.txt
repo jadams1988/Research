@@ -1,0 +1,11 @@
+{
+	SumOfSquares=0;
+	SumSquared=0;
+	Max=100;
+	for(i=1,Max,
+		SumOfSquares+=i^2;
+		SumSquared+=i
+	);
+	SumSquared*=SumSquared;
+	print(SumSquared-SumOfSquares)
+}

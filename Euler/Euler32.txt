@@ -1,0 +1,35 @@
+{
+	SUM=0;
+	Pandigital=List([1,2,3,4,5,6,7,8,9]);
+	Identity=listcreate();
+	i=2;
+	while(i<5000,
+		j=2;
+		while(j<=987&&j<i&&(length(Str(i))+length(Str(j))+length(Str(i*j)))<10,
+			Li=length(Str(i));
+			Lj=length(Str(j));
+			Lp=length(Str(i*j));
+			Veci=Vecsmall(Str(i));
+			Vecj=Vecsmall(Str(j));
+			Vecp=Vecsmall(Str(i*j));
+			L=listcreate();
+			for(k=1,Li,listput(L,Veci[k]-48));
+			for(k=1,Lj,listput(L,Vecj[k]-48));
+			for(k=1,Lp,listput(L,Vecp[k]-48));
+			listsort(L,1);
+			if(L==Pandigital,
+				listput(Identity,i*j);
+				NumId=length(Identity);
+				listsort(Identity,1);
+				NumUnique=length(Identity);
+				if(NumId==NumUnique,
+					SUM+=(i*j);
+					print([i,j,i*j])
+				)
+			);
+			j++
+		);
+		i++
+	);
+	print(SUM)
+}

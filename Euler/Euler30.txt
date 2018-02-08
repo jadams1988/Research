@@ -1,0 +1,17 @@
+{
+	SUM=0;
+	MAX=10^6;
+	for(i=2,MAX,
+		FifthSum=0;
+		DIGITS=Vecsmall(Str(i));
+		NumDigits=length(DIGITS);
+		for(j=1,NumDigits,
+			FifthSum+=((DIGITS[j]-48)^5)
+		);
+		if(FifthSum==i,
+			print(i);
+			SUM+=i
+		)
+	);
+	print(SUM)
+}

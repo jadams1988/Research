@@ -1,0 +1,21 @@
+d(a)=
+{
+	x=a;
+	AmSum=0;
+	for(i=1,floor(x/2),
+		if(x%i==0,
+			AmSum+=i
+		)
+	);
+	AmSum
+}
+
+{
+	SUM=0;
+	for(i=1,10000,
+		if(i==d(d(i))&&i!=d(i),
+			SUM+=i
+		)
+	);
+	print(SUM)
+}

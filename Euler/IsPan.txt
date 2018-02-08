@@ -1,0 +1,19 @@
+IsPan(int,n1)={
+	n=n1;
+	Pandigital=List([]);
+	for(i=1,n,
+		listput(Pandigital,i%10);
+		listsort(Pandigital)
+	);
+	temp=int;
+	Number=List(NumToVec(temp));
+	pan=1;
+	if(length(Number)>n,
+		pan=0
+	);
+	listsort(Number,1);
+	if(Number!=Pandigital,
+		pan=0
+	);
+	return(pan)
+}

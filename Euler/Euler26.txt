@@ -1,0 +1,32 @@
+{
+	MaxRepeat=0;
+	MaxNum=0;
+	for(i=1,999,
+		j=i;
+		Position=1;
+		Repeat=0;
+		remainder=1;
+		Remainders=vector(j);
+		Done=0;
+		while(!Done,
+			remainder%=j;
+			if(remainder==0,
+				Done=1;
+				Repeat=0
+			);
+			if(Remainders[remainder+1]!=0,
+				Done=1;
+				Repeat=Position-Remainders[remainder+1],
+				Remainders[remainder+1]=Position
+			);
+			Position++;
+			remainder*=10;
+		);
+		if(Repeat>MaxRepeat,
+			MaxRepeat=Repeat;
+			MaxNum=i;
+		)
+	);
+	print(MaxNum)
+			
+}	

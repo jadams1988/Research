@@ -1,0 +1,12 @@
+NumToVec(a)={
+	temp=a;
+	len=length(Str(temp));
+	NumVec=vector(len);
+	for(i=1,len,
+		NumVec[len-i+1]=temp%10;
+		temp-=temp%10;
+		temp/=10;
+	);
+	return(NumVec)
+}
+		

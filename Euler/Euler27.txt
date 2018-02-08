@@ -1,0 +1,19 @@
+{
+	MaxNumPrimes=0;
+	MaxProduct=0;
+	for(a=-999,999,
+		for(b=-999,999,
+			n=0;
+			NumPrimes=0;
+			while(isprime(n^2+a*n+b),
+				NumPrimes++;
+				n++
+			);
+			if(NumPrimes>MaxNumPrimes,
+				MaxNumPrimes=NumPrimes;
+				MaxProduct=a*b
+			)
+		)
+	);
+	print(MaxProduct)			
+}

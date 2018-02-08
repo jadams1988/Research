@@ -1,0 +1,23 @@
+{
+	Prod=0;
+	pal=0;
+	for(i=1,999,
+		for(j=1,999,
+			Prod=i*j;
+			pal1=Prod;
+			pal2=0;
+			len=sizedigit(Prod);
+			while(Prod>0,
+				pal2*=10;
+				pal2+=Prod%10;
+				Prod-=Prod%10;
+				Prod/=10
+			);
+			if(pal1==pal2&&pal1>pal&&pal1%10!=0,
+				print(pal1,"=",i,"*",j);
+				pal=pal1
+			)
+		)
+	);
+	print(pal)
+}

@@ -1,0 +1,9 @@
+{
+	LastTen=0;
+	for(i=1,1000,
+		LastTen+=(i^i)%10000000000;
+		LastTen%=10000000000
+	);
+	print(LastTen)
+}
+		

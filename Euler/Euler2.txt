@@ -1,0 +1,14 @@
+{
+	SUM=0;
+	icurrent=0;
+	inew=1;
+	while(icurrent<4000000,
+		if(icurrent%2==0,
+			SUM=SUM+icurrent
+		);
+		itemp=inew+icurrent;
+		icurrent=inew;
+		inew=itemp;
+	);
+	print(SUM)
+}

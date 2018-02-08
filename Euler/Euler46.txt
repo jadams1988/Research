@@ -1,0 +1,34 @@
+{
+	PASS=1;
+	MIN=0;
+	DONE=0;
+	int=8;
+	COMP=0;
+	while(!DONE,
+		int++;
+		if(int%2==0||isprime(int),
+			COMP=0;
+			PASS=1,
+			COMP=1
+		);
+		if(COMP,
+			ProdSum=0;
+			PASS=0;
+			prim=1;
+			while((prim+2)<=int,
+				ProdSum=0;
+				prim=nextprime(prim+1);
+				square=0;
+				while(ProdSum<int,
+					square++;
+					ProdSum=prim+2*square^2;
+					if(ProdSum==int,
+						PASS=1
+					)
+				)
+			)
+		);
+		DONE=!PASS
+	);
+	print(int)
+}

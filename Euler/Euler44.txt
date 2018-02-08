@@ -1,0 +1,24 @@
+{
+	Done=0;
+	i=0;
+	j=0;
+	Pent1=0;
+	Pent2=0;
+	while(!Done,
+		i++;
+		j=0;
+		Pent1=i*(3*i-1)/2;
+		while((j+1)<i,
+			j++;
+			Pent2=j*(3*j-1)/2;
+			SUM=Pent1+Pent2;
+			DIF=Pent1-Pent2;
+			SumRoot=(1+sqrt(1+24*SUM))/6;
+			DifRoot=(1+sqrt(1+24*DIF))/6;
+			if(SumRoot==floor(SumRoot)&&DifRoot==floor(DifRoot),
+				Done=1;
+				print([Pent1,Pent2,DIF])
+			)
+		)
+	)
+}

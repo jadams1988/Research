@@ -1,0 +1,16 @@
+{
+	NumDivisors=0;
+	n=2;
+	Triangular=1;
+	while(NumDivisors<=500,
+		NumDivisors=1;
+		Triangular+=n;
+		NumPrimeDivisors=matsize(factor(Triangular))[1];
+		for(i=1,NumPrimeDivisors,
+			NumDivisors*=(factor(Triangular)[i,2]+1)
+		);
+		print([n,Triangular,NumDivisors]);
+		n++
+	);
+	print(Triangular)
+}

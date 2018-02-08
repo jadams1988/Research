@@ -1,0 +1,17 @@
+{
+	Start=100!;
+	Num=Start;
+	NumString=Str(Num);
+	LengNum=length(NumString);
+	NumVector=vector(LengNum);
+	for(i=1,LengNum,
+		NumVector[LengNum-i+1]=Num%10;
+		Num-=Num%10;
+		Num/=10
+	);
+	Sum=0;	
+	for(i=1,LengNum,
+		Sum+=NumVector[i]
+	);
+	print(Sum)
+}

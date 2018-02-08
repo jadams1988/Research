@@ -1,0 +1,16 @@
+{
+	PROD=1;
+	count=0;
+	int=0;
+	for(i=0,6,
+		while(count<10^i,
+			int++;
+			count+=length(Str(int))
+		);
+		OFF=count-10^i;
+		NumVec=NumToVec(int);
+		len=length(NumVec);
+		PROD*=NumVec[len-OFF]
+	);
+	print(PROD)
+}

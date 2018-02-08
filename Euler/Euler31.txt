@@ -1,0 +1,23 @@
+{
+	SUM=0;
+	Ways=0;
+	for(L2=0,1,
+		for(L1=0,2,
+			for(Fifty=0,4,
+				for(Twenty=0,10,
+					for(Ten=0,20,
+						for(Five=0,40,
+							for(Two=0,100,
+								SUM=200*L2+100*L1+50*Fifty+20*Twenty+10*Ten+5*Five+2*Two;
+								if(SUM<=200,
+									Ways++
+								)
+							)
+						)
+					)
+				)
+			)
+		)
+	);
+	print(Ways)
+}

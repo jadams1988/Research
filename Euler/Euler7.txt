@@ -1,0 +1,13 @@
+{
+	NumPrime=1;
+	CurPrime=2;
+	Done=0;
+	while(!Done,
+		CurPrime=nextprime(CurPrime+1);
+		NumPrime++;
+		if(NumPrime==10001,
+			Done=1
+		)
+	);
+	print(CurPrime)
+}

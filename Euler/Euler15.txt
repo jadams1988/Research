@@ -1,0 +1,7 @@
+{
+	Grid=matrix(20,20);
+	Rows=matsize(Grid)[1];
+	Columns=matsize(Grid)[2];
+	NumTrips=(Rows+Columns)!\(Rows!*Columns!);
+	print(NumTrips)
+}
